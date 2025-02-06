@@ -169,22 +169,16 @@ header {
     height: 100px;
     object-fit: cover;
     border-radius: 12px;
-    padding-left: 0px;
+    padding-left: px;
 }
 
 .soup-image-wrapper {
     position: relative;
     width: 100px;
-    padding-left: 12px;
+    padding-left: 52px;
+    padding-right: 86px;
 }
 
-.water-image {
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    width: 30px !important;
-    height: 30px !important;
-}
 
 /* Price and Actions */
 .price-action {
