@@ -1,0 +1,164 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background: #FFFFFF;
+    color: #062C0C;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8F5E9;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #062C0C;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* FAQ Container */
+.faq-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Search Bar */
+.search-container {
+    margin-bottom: 24px;
+}
+
+#searchFaq {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #E8F5E9;
+    font-size: 16px;
+}
+
+#searchFaq::placeholder {
+    color: #999;
+}
+
+/* FAQ Sections */
+.faq-section {
+    margin-bottom: 32px;
+}
+
+.faq-section h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #60D669;
+}
+
+/* FAQ Items */
+.faq-item {
+    background: #FFFFFF;
+    border: 1px solid #E8F5E9;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #F5F5F5;
+}
+
+.faq-question span {
+    font-weight: 500;
+    flex: 1;
+}
+
+.arrow {
+    font-size: 20px;
+    color: #60D669;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(-90deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #F9F9F9;
+}
+
+.faq-item.active .faq-answer {
+    padding: 16px;
+    max-height: 500px; /* Adjust based on your content */
+}
+
+/* WhatsApp Button */
+#whatsapp-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #60D669;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+#whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+#whatsapp-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from { max-height: 0; }
+    to { max-height: 500px; }
+}
+
+@keyframes slideUp {
+    from { max-height: 500px; }
+    to { max-height: 0; }
+}

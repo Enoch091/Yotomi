@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yotomi | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Yotomi Logo" class="logo">
+        <div class="header-icons">
+            <button onclick="goToCart()" class="cart-btn">
+                <img src="assets/icons/cart.png" alt="Cart" class="icon">
+            </button>
+            <div class="hamburger-menu" id="menu-btn">☰</div>
+        </div>
+    </header>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="#" onclick="navigateTo('order-history')">Order History</a></li>
+            <li><a href="#" onclick="navigateTo('faq')">FAQ</a></li>
+            <li><a href="#" onclick="navigateTo('contact')">Contact Us</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="home-container">
+        <h1>What are you <span class="highlight-text">ordering</span> from us today?</h1>
+        
+        <div class="menu-list">
+            <button class="menu-item" onclick="goToSoupMenu('egusi')">
+                <span>Egusi</span>
+                <img src="assets/icons/arrow.png" alt="Arrow">
+            </button>
+            <button class="menu-item" onclick="goToSoupMenu('efo')">
+                <span>Efo</span>
+                <img src="assets/icons/arrow.png" alt="Arrow">
+            </button>
+            <button class="menu-item" onclick="goToSoupMenu('redstew')">
+                <span>Red Stew</span>
+                <img src="assets/icons/arrow.png" alt="Arrow">
+            </button>
+            <button class="menu-item" onclick="goToSoupMenu('okro')">
+                <span>Okro</span>
+                <img src="assets/icons/arrow.png" alt="Arrow">
+            </button>
+        </div>
+    </main>
+
+    <button id="whatsapp-btn" onclick="openWhatsApp()">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+    </button>
+
+    <footer>
+        <p>&copy; 2025, Yotomi</p>
+        <a href="#" onclick="navigateTo('contact')">Contact Us</a>
+        <a href="#" onclick="navigateTo('about')">About Us</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Yotomi</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Yotomi Logo" class="logo">
+        <div class="header-icons">
+            <button onclick="goToCart()" class="cart-btn">
+                <img src="assets/icons/cart.png" alt="Cart" class="icon">
+            </button>
+            <div class="hamburger-menu" id="menu-btn">☰</div>
+        </div>
+    </header>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="#" onclick="navigateTo('order-history')">Order History</a></li>
+            <li><a href="#" onclick="navigateTo('faq')">FAQ</a></li>
+            <li><a href="#" onclick="navigateTo('contact')">Contact Us</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-container">
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            
+            <div class="contact-buttons">
+                <a href="tel:08080161767" class="contact-btn phone-btn">
+                    <div class="icon-container">
+                        <img src="assets/icons/phone.png" alt="Phone">
+                    </div>
+                    <span>0808 - 016 - 1767</span>
+                </a>
+
+                <a href="https://wa.me/2348080161767" class="contact-btn whatsapp-btn">
+                    <div class="icon-container">
+                        <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+                    </div>
+                    <span>0808 - 016 - 1767</span>
+                </a>
+            </div>
+        </div>
+        <a href="index.html" class="back-btn">←</a>
+    </main>
+
+    <button id="whatsapp-btn">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+    </button>
+
+    <footer>
+        <p>&copy; 2025, Yotomi</p>
+        <a href="#" onclick="navigateTo('contact')">Contact Us</a>
+        <a href="#" onclick="navigateTo('about')">About Us</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

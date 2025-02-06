@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yotomi | Red Stew</title>
+    <link rel="stylesheet" href="css/menu-styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Yotomi Logo" class="logo">
+        <div class="header-icons">
+            <button onclick="goToCart()" class="cart-btn">
+                <img src="assets/icons/cart.png" alt="Cart" class="icon">
+            </button>
+            <div class="hamburger-menu" id="menu-btn">☰</div>
+        </div>
+    </header>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="#" onclick="navigateTo('order-history')">Order History</a></li>
+            <li><a href="#" onclick="navigateTo('faq')">FAQ</a></li>
+            <li><a href="#" onclick="navigateTo('contact')">Contact Us</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About Us</a></li>
+        </ul>
+    </nav>
+
+    <main class="menu-container">
+        <a href="index.html" class="back-btn">←</a>
+        
+        <div class="menu-item">
+            <div class="menu-text">
+                <h2>TastiLite Red Stew</h2>
+                <p>1 Pack, 6 Meats</p>
+                <div class="price-action">
+                    <span class="price">N5,000</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to cart</button>
+                </div>
+            </div>
+            <img src="assets/images/soups/redstew.png" alt="Red Stew">
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-text">
+                <h2>Beta Plate Red Stew</h2>
+                <p>1 Mega Pack, 10 Meats</p>
+                <div class="price-action">
+                    <span class="price">N9,000</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to cart</button>
+                </div>
+            </div>
+            <img src="assets/images/soups/redstew.png" alt="Red Stew">
+        </div>
+
+        <div class="menu-item">
+            <div class="menu-text">
+                <h2>Heavy Duty Red Stew</h2>
+                <p>1 Pot, 6 Chicken</p>
+                <div class="price-action">
+                    <span class="price">N15,000</span>
+                    <button class="add-to-cart" onclick="addToCart(this)">Add to cart</button>
+                </div>
+            </div>
+            <div class="soup-image-wrapper">
+                <img src="assets/images/soups/redstew.png" alt="Red Stew">
+            </div>
+        </div>
+    </main>
+
+    <div class="delivery-alert">
+        <p>&#x1F6A8; Delivery runs from 6:00 - 7:00 PM</p>
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2025, Yotomi</p>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

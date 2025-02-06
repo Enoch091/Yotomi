@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Yotomi</title>
+    <link rel="stylesheet" href="css/order-history.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button onclick="goBack()" class="back-button">✕</button>
+            <h1>Order History</h1>
+        </div>
+    </header>
+
+    <main class="order-history-container">
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <img src="assets/icons/no-orders.png" alt="No Orders">
+            <h2>You have no past orders</h2>
+            <button onclick="startOrdering()" class="start-order-btn">Start Ordering</button>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-list" id="ordersList">
+            <!-- Orders will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Order Template -->
+    <template id="orderTemplate">
+        <div class="order-card">
+            <div class="order-header" onclick="toggleOrderDetails(this)">
+                <div class="order-info">
+                    <div class="order-date"></div>
+                    <div class="status-badge successful">Order Delivered</div>
+                </div>
+                <div class="order-total"></div>
+            </div>
+            
+            <div class="order-details" style="display: none;">
+                <div class="items-list">
+                    <!-- Items will be added here -->
+                </div>
+                <button class="reorder-btn" onclick="reorderItems(this)">
+                    <img src="assets/icons/reload.png" alt="Reorder">
+                    Reorder
+                </button>
+            </div>
+        </div>
+    </template>
+
+    <script src="js/order-history.js"></script>
+</body>
+</html>

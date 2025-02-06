@@ -1,0 +1,372 @@
+/* Mobile First Approach */
+:root {
+    --header-height: 70px;
+    --container-padding: 16px;
+    --primary-color: #60D669;
+    --background-light: #E8F5E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #062C0C;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #E8F5E9;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    width: 100px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Slide Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    background: #60D669;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 100;
+    min-width: 200px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #062C0C;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    color: #60D669;
+    background-color: rgba(96, 214, 105, 0.1);
+}
+
+
+/* Main Content */
+.home-container {
+    text-align: left;
+    padding: 40px 10%;
+    flex: 1;
+}
+
+.home-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.highlight-text {
+    color: #60D669;
+    font-style: italic;
+}
+
+/* Menu Container */
+.menu-container {
+    padding: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    padding: 8px 0;
+    margin-bottom: 12px;
+}
+
+/* Menu Items */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin-bottom: 45px;
+    gap: 0px;
+    background: none;
+}
+
+.menu-text {
+    flex: 1;
+}
+
+.menu-text h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.menu-text p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    padding-left: 0px;
+}
+
+.soup-image-wrapper {
+    position: relative;
+    width: 100px;
+    padding-left: 12px;
+}
+
+.water-image {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 30px !important;
+    height: 30px !important;
+}
+
+/* Price and Actions */
+.price-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* Reduced gap between price and button */
+}
+
+.price {
+    color: #22c55e;
+    font-weight: 500;
+    font-size: 14px;  /* Slightly smaller font size */
+}
+
+.add-to-cart {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 4px 12px;  /* Reduced padding for a more compact look */
+    border-radius: 4px;  /* Less rounded corners */
+    font-size: 12px;  /* Smaller font size */
+    font-weight: 400;
+    cursor: pointer;
+    text-transform: capitalize;  /* Proper case as shown in image */
+}
+
+/* Rest of your CSS remains the same */
+
+/* Quantity Controls */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-control button {
+    width: 24px;
+    height: 24px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Delivery Alert */
+.delivery-alert {
+    background-color: #E8F5E9;
+    text-align: center;
+    padding: 12px;
+    margin: 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-notification {
+    position: absolute;
+    top: -5px;  /* Adjust this value */
+    right: -5px;  /* Adjust this value */
+    background: hsl(0, 67%, 56%);
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* WhatsApp Button */
+#whatsapp-btn {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: grab;
+    z-index: 100;
+    touch-action: none;
+}
+
+#whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
+#whatsapp-btn:active {
+    cursor: grabbing;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #E8F5E9;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #062C0C;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #60D669;
+    background-color: rgba(96, 214, 105, 0.1);
+}
+
+/* Menu Navigation */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 8px 0;
+    z-index: 100;
+    min-width: 180px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 8px 16px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #062C0C;
+    font-size: 14px;
+    display: block;
+}
+
+@media (max-width: 380px) {
+    .menu-container {
+        padding: 12px;
+    }
+    
+    .menu-item img {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-container {
+        padding: 24px;
+    }
+    
+    .menu-text h2 {
+        font-size: 18px;
+    }
+    
+    .menu-item img {
+        width: 120px;
+        height: 120px;
+    }
+}

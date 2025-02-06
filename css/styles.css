@@ -1,0 +1,402 @@
+/* Mobile First Approach */
+:root {
+    --header-height: 70px;
+    --container-padding: 16px;
+    --primary-color: #60D669;
+    --background-light: #E8F5E9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #062C0C;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #E8F5E9;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    width: 100px;
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Slide Menu */
+.menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    background: #E8F5E9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 100;
+    min-width: 200px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #062C0C;
+    font-size: 1.2rem;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 4px;
+}
+
+.menu ul li a:hover {
+    color: #60D669;
+    background-color: rgba(96, 214, 105, 0.1);
+}
+
+/* Main Content */
+.home-container {
+    text-align: left;
+    padding: 40px 10%;
+    flex: 1;
+}
+
+.home-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.highlight-text {
+    color: #60D669;
+    font-style: italic;
+}
+
+/* Menu List */
+.menu-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    border: none;
+    width: 100%;
+    text-align: left;
+    background-color: #E8F5E9;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #60D669;
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+.menu-item img {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover img {
+    transform: translateX(5px);
+}
+
+/* WhatsApp Button */
+#whatsapp-btn {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: grab;
+    z-index: 100;
+    touch-action: none;
+}
+
+#whatsapp-btn img {
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+}
+
+#whatsapp-btn:active {
+    cursor: grabbing;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #E8F5E9;
+    padding: 20px;
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+footer a {
+    text-decoration: none;
+    color: #062C0C;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #60D669;
+    background-color: rgba(96, 214, 105, 0.1);
+}
+
+
+.cart-btn {
+    position: relative;
+}
+
+.cart-notification {
+    position: absolute;
+    top: -5px;  /* Adjust this value */
+    right: -5px;  /* Adjust this value */
+    background: hsl(0, 67%, 56%);
+    color: white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+
+/* Add these styles to your existing CSS file */
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+    padding: 20px;
+}
+
+.about-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content h1 {
+    color: #60D669;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Close Button (if needed) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+.about-container {
+    display: flex;
+    flex-direction: column;  /* Changed to column to stack content */
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+.about-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;  /* Added margin to create space above back button */
+}
+
+.about-content h1 {
+    color: #60D669;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Updated back button styles */
+.back-btn {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;  /* Increased font size */
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;  /* Center align */
+}
+
+/* Add these styles to your existing CSS file */
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 200px);
+    padding: 20px;
+}
+
+.contact-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-content h1 {
+    color: #60D669;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    max-width: 300px;
+}
+
+.icon-container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-btn span {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.phone-btn .icon-container {
+    color: #60D669;
+}
+
+.whatsapp-btn .icon-container {
+    color: #25D366;
+}
+
+/* Back button styling (same as about page) */
+.back-btn {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}

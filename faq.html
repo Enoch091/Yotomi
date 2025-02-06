@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Yotomi</title>
+    <link rel="stylesheet" href="css/faq.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button onclick="goBack()" class="back-button">✕</button>
+            <h3>FAQ</h3>
+        </div>
+    </header>
+
+    <main class="faq-container">
+        <!-- Optional Search Bar -->
+        <div class="search-container">
+            <input type="text" id="searchFaq" placeholder="Search FAQs..." onkeyup="searchFaqs()">
+        </div>
+
+        <!-- FAQ Sections -->
+        <div class="faq-sections">
+            <!-- Ordering & Delivery -->
+            <section class="faq-section">
+                <h2>Ordering & Delivery</h2>
+                <div class="faq-group">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>How do I place an order?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            Visit the menu, select your preferred soup, add to cart, and proceed to checkout.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>What time do deliveries happen?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            Deliveries are made on Sundays & Wednesdays between 6:00 PM - 7:30 PM.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>Can I cancel or change my order after they are sent?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            No, once an order is placed, it cannot be modified or canceled.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payments -->
+            <section class="faq-section">
+                <h2>Payments</h2>
+                <div class="faq-group">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>What payment methods do you accept?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            Payments are made via bank transfer only, with details provided at checkout.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>Do you accept cash on delivery?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            No, we only accept pre-payment via bank transfer.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pickup & Delivery -->
+            <section class="faq-section">
+                <h2>Pickup & Delivery</h2>
+                <div class="faq-group">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>Where is the delivery location?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            Location to be filled in the checkout page during order placement.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact & Support -->
+            <section class="faq-section">
+                <h2>Contact & Support</h2>
+                <div class="faq-group">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            <span>How can I contact customer support?</span>
+                            <div class="arrow">›</div>
+                        </div>
+                        <div class="faq-answer">
+                            Click the WhatsApp button on any page to chat with us directly.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- WhatsApp Button -->
+    <button id="whatsapp-btn" onclick="openWhatsApp()">
+        <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+    </button>
+
+    <script src="js/faq.js"></script>
+</body>
+</html>
