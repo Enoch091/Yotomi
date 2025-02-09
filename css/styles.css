@@ -337,19 +337,19 @@ footer a:hover {
     width: 100%;
     max-width: 600px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
-.contact-content h1 {
+.contact-content h3 {
     color: #60D669;
-    font-size: 24px;
+    font-size: 19px;
     margin-bottom: 40px;
 }
 
 .contact-buttons {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
 }
 
@@ -357,7 +357,7 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 0px;
     text-decoration: none;
     color: #333;
     width: 100%;
@@ -373,8 +373,8 @@ footer a:hover {
 }
 
 .icon-container img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .contact-btn span {
@@ -387,6 +387,10 @@ footer a:hover {
 }
 
 .whatsapp-btn .icon-container {
+    color: #25D366;
+}
+
+.instagram-btn .icon-container {
     color: #25D366;
 }
 
